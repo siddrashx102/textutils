@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router";
 
 export default function NavBar({ title, aboutText, mode, toggleMode }) {
   return (
@@ -10,21 +11,9 @@ export default function NavBar({ title, aboutText, mode, toggleMode }) {
         // style={{ backgroundColor: mode === "dark" ? "dark" : "white" }}
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
             {title}
-          </a>
-          {/* <div className={`navbar-text form-check form-switch text-${mode === 'dark' ? 'light' : 'dark'}`}>
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="switchCheckDefault"
-                onClick={toggleMode}
-              />
-              <label class="form-check-label" htmlFor="switchCheckDefault">
-                Dark Mode
-              </label>
-            </div> */}
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -39,14 +28,14 @@ export default function NavBar({ title, aboutText, mode, toggleMode }) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/about">
+                <Link className="nav-link active" aria-current="page" to="/about">
                   {aboutText}
-                </a>
+                </Link>
               </li>
             </ul>
             <div className={`form-check form-switch text-${mode === 'dark' ? 'light' : 'dark'}`}>

@@ -1,25 +1,31 @@
 import React from "react";
 
-export default function About() {
-  const [myStyle, setMyStyle] = React.useState({
-    color: "black",
-    backgroundColor: "white",
-  });
+export default function About({ mode, toggleMode }) {
+  // default light mode
+  // const [myStyle, setMyStyle] = React.useState({
+  //   color: "black",
+  //   backgroundColor: "white",
+  // });
 
-  const darkModeHandler = () => {
-    if (myStyle.color === "black") {
-      setMyStyle({
-        color: "white",
-        backgroundColor: "black",
-      });
-    } else {
-      setMyStyle({
-        color: "black",
-        backgroundColor: "white",
-      });
-    }
-  };
+  // const darkModeHandler = () => {
+  //   if (myStyle.color === "black") {
+  //     setMyStyle({
+  //       color: "white",
+  //       backgroundColor: "black",
+  //     });
+  //   } else {
+  //     setMyStyle({
+  //       color: "black",
+  //       backgroundColor: "white",
+  //     });
+  //   }
+  // };
 
+  const myStyle = {
+    color: (mode=='dark') ? 'white' : 'black',
+    backgroundColor: (mode=='dark') ? '#042743' : 'white'
+  }
+  console.log(mode)
   return (
     <div className="p-3" style={myStyle}>
       <div class="accordion" id="accordionExample">
@@ -114,13 +120,6 @@ export default function About() {
             </div>
           </div>
         </div>
-        <button
-          type="button"
-          class="btn btn-dark mt-3"
-          onClick={darkModeHandler} style={myStyle}
-        >
-          Enable Dark Mode
-        </button>
       </div>
     </div>
   );
