@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router";
 
-export default function NavBar({ title, aboutText, mode, toggleMode }) {
+export default function NavBar({ title, aboutText, mode, toggleMode, changeTheme }) {
   return (
     <div>
       <nav
@@ -38,15 +38,21 @@ export default function NavBar({ title, aboutText, mode, toggleMode }) {
                 </Link>
               </li>
             </ul>
+            
+            {/* <div className="rounded-3 mx-2 bg-danger" style={{width: 30, height: 30}} onClick={() => changeTheme('danger')}></div>
+            <div className="rounded-3 mx-2 bg-success" style={{width: 30, height: 30}} onClick={() => changeTheme('success')}></div>
+            <div className="rounded-3 mx-2 bg-primary" style={{width: 30, height: 30}} onClick={() => changeTheme('primary')}></div>
+            <div className="rounded-3 mx-2 bg-secondary" style={{width: 30, height: 30}} onClick={() => changeTheme('secondary')}></div>
+             */}
             <div className={`form-check form-switch text-${mode === 'dark' ? 'light' : 'dark'}`}>
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 role="switch"
                 id="switchCheckDefault"
                 onClick={toggleMode}
               />
-              <label class="form-check-label" htmlFor="switchCheckDefault">
+              <label className="form-check-label" htmlFor="switchCheckDefault">
                 Dark Mode
               </label>
             </div>

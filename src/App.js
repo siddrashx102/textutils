@@ -34,6 +34,27 @@ function App() {
     }
   };
 
+  // const changeTheme = (theme) => {
+  //   console.log(`Theme changed to ${theme}`);
+  //   if (theme === "danger") {
+  //     document.body.style.backgroundColor = "#dc3545";
+  //     showAlert("Theme changed to Danger");
+  //   }
+  //   else if (theme === "success") {
+  //     document.body.style.backgroundColor = "#198754";
+  //     showAlert("Theme changed to Success");
+  //   }
+  //   else if (theme === "primary") {
+  //     document.body.style.backgroundColor = "#0d6efd";
+  //     showAlert("Theme changed to Primary");
+  //   }
+  //   else if (theme === "secondary") {
+  //     document.body.style.backgroundColor = "#6c757d";
+  //     showAlert("Theme changed to Secondary");
+  //   }
+  //   // document.body.style.backgroundColor = "#042743";
+  // }
+
   return (
     <>
       <BrowserRouter>
@@ -43,6 +64,7 @@ function App() {
             aboutText="About"
             mode={mode}
             toggleMode={toggleMode}
+            // changeTheme={changeTheme}
           />
 
           {/* {welcomeMessage()} */}

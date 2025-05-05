@@ -22,8 +22,8 @@ export default function TextForm({ heading, mode, showAlert }) {
 
   //count words and characters
   const wordCount = (text) => {
-    const words = text.split(" ");
-    return words.filter((word) => word !== "").length;
+    const words = text.split(/\s+/); // Split by any whitespace (spaces, tabs, newlines)
+    return words.filter((word) => word.trim() !== "").length; // Filter out empty strings
   };
 
   return (
