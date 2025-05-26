@@ -1,126 +1,48 @@
-import React from "react";
-
-export default function About({ mode, toggleMode }) {
-  // default light mode
-  // const [myStyle, setMyStyle] = React.useState({
-  //   color: "black",
-  //   backgroundColor: "white",
-  // });
-
-  // const darkModeHandler = () => {
-  //   if (myStyle.color === "black") {
-  //     setMyStyle({
-  //       color: "white",
-  //       backgroundColor: "black",
-  //     });
-  //   } else {
-  //     setMyStyle({
-  //       color: "black",
-  //       backgroundColor: "white",
-  //     });
-  //   }
-  // };
-
+export default function About({ mode }) {
   const myStyle = {
-    color: (mode=='dark') ? 'white' : 'black',
-    backgroundColor: (mode=='dark') ? '#042743' : 'white'
-  }
-  console.log(mode)
+    color: mode === "dark" ? "white" : "black",
+    backgroundColor: mode === "dark" ? "#042743" : "white",
+  };
+
   return (
     <div className="p-3" style={myStyle}>
-      <div class="accordion" id="accordionExample">
-        <h2 className="mb-4">About Us</h2>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne" style={myStyle}
-            >
-              Accordion Item #1
-            </button>
-          </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse show"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body" style={myStyle}>
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo"
-              aria-expanded="false"
-              aria-controls="collapseTwo" style={myStyle}
-            >
-              Accordion Item #2
-            </button>
-          </h2>
-          <div
-            id="collapseTwo"
-            class="accordion-collapse collapse"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body" style={myStyle}>
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseThree"
-              aria-expanded="false"
-              aria-controls="collapseThree" style={myStyle}
-            >
-              Accordion Item #3
-            </button>
-          </h2>
-          <div
-            id="collapseThree"
-            class="accordion-collapse collapse"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body" style={myStyle}>
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-      </div>
+      <h2 className="mb-4">📝 About This App</h2>
+      <p>
+        <strong>Text Utility Tool</strong> is a lightweight and user-friendly web
+        app built to simplify everyday text manipulation tasks—right from your
+        browser, with no distractions.
+      </p>
+      <p>
+        Whether you're a writer, developer, student, or just someone looking to
+        quickly clean or convert text, this tool is designed to help you do that
+        efficiently.
+      </p>
+      <h4 className="mt-4 mb-2">🚀 Key Highlights:</h4>
+      <ul>
+        <li>
+          <strong>Text Case Conversion</strong> – Easily switch between{" "}
+          <b>UPPERCASE</b>, <b>lowercase</b>, and more.
+        </li>
+        <li>
+          <strong>Live Word &amp; Character Count</strong> – Get instant feedback
+          as you type.
+        </li>
+        <li>
+          <strong>Reading Time Estimation</strong> – Know how long your content
+          will take to read.
+        </li>
+        <li>
+          <strong>Live Text Preview</strong> – Visualize changes as you type.
+        </li>
+        <li>
+          <strong>Dark Mode</strong> – Comfortable usage anytime, anywhere.
+        </li>
+      </ul>
+      <p className="mt-4">
+        This is just the first version! More features like{" "}
+        <b>Find &amp; Replace</b>, <b>URL/Base64 utilities</b>, and{" "}
+        <b>clipboard integration</b> are already in the works.
+      </p>
     </div>
   );
 }

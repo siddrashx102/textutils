@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router";
 
@@ -8,7 +7,6 @@ export default function NavBar({ title, aboutText, mode, toggleMode, changeTheme
       <nav
         className="navbar navbar-expand-lg bg-body-tertiary"
         data-bs-theme={mode}
-        // style={{ backgroundColor: mode === "dark" ? "dark" : "white" }}
       >
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
@@ -38,12 +36,7 @@ export default function NavBar({ title, aboutText, mode, toggleMode, changeTheme
                 </Link>
               </li>
             </ul>
-            
-            {/* <div className="rounded-3 mx-2 bg-danger" style={{width: 30, height: 30}} onClick={() => changeTheme('danger')}></div>
-            <div className="rounded-3 mx-2 bg-success" style={{width: 30, height: 30}} onClick={() => changeTheme('success')}></div>
-            <div className="rounded-3 mx-2 bg-primary" style={{width: 30, height: 30}} onClick={() => changeTheme('primary')}></div>
-            <div className="rounded-3 mx-2 bg-secondary" style={{width: 30, height: 30}} onClick={() => changeTheme('secondary')}></div>
-             */}
+      
             <div className={`form-check form-switch text-${mode === 'dark' ? 'light' : 'dark'}`}>
               <input
                 className="form-check-input"
